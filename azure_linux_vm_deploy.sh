@@ -12,3 +12,6 @@ az vm create \
     --size Standard_DS2_v2 \
     --admin-username "$admin_username" \
     --generate-ssh-keys
+
+
+IPADDRESS=$(az vm show --name MyLinuxAgent --resource-group gr-gyorgy-tailspin-dev-weu --show-details --query [publicIps] --output tsv)
